@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class> 
+
+<student> 
+
+<name> KRISHNA </name> 
+
+<id> 190050110 </id> 
+
+ <avg>92</avg> 
+
+   <dob>14-12-1999</dob>   
+
+   <time>10:08</time>        
+
+   <mobile no="9938796990"/>  		    
+
+   <distinction>YES</distinction> 
+
+</student> 
+
+<student> 
+
+	<name> KASHYAP </name> 
+
+	<id> 190050111 </id> 
+
+ 	<avg>78</avg> 
+
+   <dob>07-06-2001</dob>   
+
+   <time>10:08</time>        
+
+   <mobile no="8247614225"/>  		    
+
+   <distinction>NO</distinction> 
+
+</student>
+
+<student> 
+
+<name> HEMANTH </name> 
+
+<id> 190031616 </id> 
+
+ <avg>85</avg> 
+
+   <dob>10-07-2001</dob>   
+
+   <time>10:08</time>        
+
+   <mobile no="9347803904"/>  		    
+
+   <distinction>YES</distinction> 
+
+</student>
+
+<student> 
+
+<name> RISHI </name> 
+
+<id> 190031992 </id> 
+
+ <avg>72</avg> 
+
+   <dob>05-09-2001</dob>   
+
+   <time>10:08</time>        
+
+   <mobile no="9938796990"/>  		    
+
+   <distinction>YES</distinction> 
+
+</student>
+
+<student> 
+
+<name> SINDHURAMRUTHA </name> 
+
+<id> 190030727 </id> 
+
+ <avg>92</avg> 
+
+   <dob>27-10-2001</dob>   
+
+   <time>10:08</time>        
+
+   <mobile no="9938796990"/>  		    
+
+   <distinction>YES</distinction> 
+
+</student>
+
+</class>
