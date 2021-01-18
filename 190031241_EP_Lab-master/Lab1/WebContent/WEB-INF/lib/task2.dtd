@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Student (student+)>
+<!ELEMENT student (regno, name, avg, dob, time, mobileNo, distinction)>
+<!ELEMENT regno (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT avg (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT mobileNo (#PCDATA)>
+<!ELEMENT distinction (#PCDATA)>
+<!ATTLIST student eid ID #REQUIRED>
