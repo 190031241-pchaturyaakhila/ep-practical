@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Student (student+)>
+<!ELEMENT student (regno, name, gpa, branch)>
+<!ELEMENT regno (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT gpa (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ATTLIST student eid ID #REQUIRED>

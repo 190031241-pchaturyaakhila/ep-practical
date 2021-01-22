@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Student>
+	<student eid="1">
+		<regno>19003122</regno>
+		<name>sidhu</name>
+		<avg>92</avg>
+		<dob>15-08-1992</dob>
+		<time>9:20</time>
+		<mobileNo>9133256988</mobileNo>
+		<distinction>yes</distinction>
+	</student>
+
+	<student eid="2">
+		<regno>19003123</regno>
+		<name>koushik</name>
+		<avg>93</avg>
+		<dob>16-08-1992</dob>
+		<time>8:20</time>
+		<mobileNo>9133254988</mobileNo>
+		<distinction>yes</distinction>
+	</student>
+
+	<student eid="3">
+		<regno>19003125</regno>
+		<name>jayanth</name>
+		<avg>94</avg>
+		<dob>15-07-1992</dob>
+		<time>9:21</time>
+		<mobileNo>8133256988</mobileNo>
+		<distinction>yes</distinction>
+	</student>
+
+	<student eid="4">
+		<regno>19003127</regno>
+		<name>chandu</name>
+		<avg>95</avg>
+		<dob>15-07-1992</dob>
+		<time>7:21</time>
+		<mobileNo>8139256988</mobileNo>
+		<distinction>yes</distinction>
+	</student>
+
+	<student eid="5">
+		<regno>19003126</regno>
+		<name>chaithanya</name>
+		<avg>95</avg>
+		<dob>15-04-1992</dob>
+		<time>9:18</time>
+		<mobileNo>8133257988</mobileNo>
+		<distinction>yes</distinction>
+	</student>
+
+</Student>

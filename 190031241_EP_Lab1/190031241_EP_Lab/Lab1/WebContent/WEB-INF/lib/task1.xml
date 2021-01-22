@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Student SYSTEM "task1.dtd">
+<Student>
+	<student eid="a">
+		<regno>190031330</regno>
+		<name>Chaitanya</name>
+		<gpa>9.2</gpa>
+		<branch>CSE</branch>
+	</student>
+	<student eid="b">
+		<regno>190030536</regno>
+		<name>Akshay</name>
+		<gpa>9.3</gpa>
+		<branch>ECE</branch>
+	</student>
+	<student eid="d">
+		<regno>190031002</regno>
+		<name>Rahul</name>
+		<gpa>9.4</gpa>
+		<branch>CSE</branch>
+	</student>	
+	<student eid="e">
+		<regno>190031003</regno>
+		<name>Nikhil</name>
+		<gpa>9.1</gpa>
+		<branch>CSE</branch>
+	</student>
+    <student eid="f">
+		<regno>190031071</regno>
+		<name>Ajay</name>
+		<gpa>9.3</gpa>
+		<branch>CSE</branch>
+	</student>	
+</Student>
