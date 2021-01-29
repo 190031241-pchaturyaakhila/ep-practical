@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Students>
+<student regno="190030716">
+<name>Prathyusha</name>
+<marks>95</marks>
+<emailid>prathyusha@gmail.com</emailid>
+</student>
+<student regno="190030001">
+<name>priya</name>
+<marks>90</marks>
+<emailid>priya@gmail.com</emailid>
+</student>
+<student regno="190030002">
+<name>pranathi</name>
+<marks>85</marks>
+<emailid>pranathi@gmail.com</emailid>
+</student>
+</Students>

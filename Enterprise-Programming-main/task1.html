@@ -1,0 +1,43 @@
+<html method="post">
+<head>
+<script>
+function validation()
+{
+var user=document.f1.user.value;
+var password=document.f1.password.value;
+a=0;
+if(user==null||user=="")
+{
+alert("Username is empty");
+a=1;
+}
+else if(user.length<8)
+{
+alert("Username should contain minimum 8 characters");
+a=1;
+}
+if(password==null||password=="")
+{
+alert("Password is empty");
+a=1;
+}
+else if(password.length<8)
+{
+alert("Password should contain minimum 8 characters");
+a=1;
+}
+if(a==0)
+{
+alert("Welcome "+user);
+}
+}
+</script>
+</head>
+<body>
+<form name="f1" onsubmit="validation()" method="post">
+Username:<input type="text" name="user"><br>
+Password:<input type="password" name="password"><br>
+<input type="submit" value="login">
+</form>
+</body>
+</html>

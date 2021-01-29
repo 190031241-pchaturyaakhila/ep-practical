@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function validation()
+{
+var user=document.f1.user.value;
+var email=document.f1.email.value;
+if(user==null||user=="")
+{
+alert("Invalid Username");
+}
+var a=0;
+var at="-1"
+var at=email.indexOf('@');
+var dot="-1"
+var dot=email.lastIndexOf('.');
+if(parseInt(at)<0||parseInt(dot)<parseInt(at)||parseInt(dot)-parseInt(at)==1||email.length-parseInt(dot)<3)
+{
+a=1;
+}
+if(a==1)
+{
+alert("Invalid id");
+}
+}
+</script>
+</head>
+<body>
+<form name="f1" onsubmit="validation()">
+Username:<input type="text" name="user"><br>
+Email:<input type="text" name="email"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
