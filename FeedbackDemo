@@ -1,0 +1,179 @@
+index.html :
+------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body background="https://assets.entrepreneur.com/content/3x2/2000/20191219170611-GettyImages-1152794789.jpeg">
+<a href="feedback.html"> Feedback </a>
+</body>
+</html>
+-----------------------
+feedback.html :
+-----------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 style="text-align:center;"> Feedback form </h1>
+<form action="feedback" method="post">
+<table align="center" class="bordered">
+<tr><td><h2> 1.StudentEMail: </h2></td>
+           <td>
+				<input type = "email" name = "email" placeholder = "Enter your Username" required>
+			</td>
+			</tr>
+<tr><td><h2>  2.Gender: </h2></td>
+           <td><input type="radio" name="gender" value="male"><label for="male"> Male </label></td>
+           <td><input type="radio" name="gender" value="female"><label for="female">Female </label></td>
+           </tr>
+<tr><td><h2> 3.Performance: </h2></td>
+           <td><input type="checkbox" name="performance" value="excellent"><label for="excellent"> Excellent </label></td>
+           <td><input type="checkbox" name="performance" value="good"><label for="good"> Good </label></td>
+           <td><input type="checkbox" name="performance" value="bad"><label for="bad"> Bad </label></td>
+           </tr>
+<tr><td><h2>4. How are your Classes going?</h2></td>
+               <td><select name="Q1" class="dropdown" required>
+						<option>Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+</tr>
+</table><br>
+<center><input type="submit" value="Submit Feedback"></center>
+</form>
+</body>
+</html>
+--------------------------------------
+feedbackbean.java :
+--------------------------------------
+
+public class feedbackbean {
+private String email;
+private String gender;
+// private String[] performance;
+private String performance;
+private String Q1;
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getGender() {
+	return gender;
+}
+public void setGender(String gender) {
+	this.gender = gender;
+}
+public String getPerformance() {
+	return performance;
+}
+public void setPerformance(String performance) {
+	this.performance = performance;
+}
+public String getQ1() {
+	return Q1;
+}
+public void setQ1(String q1) {
+	Q1 = q1;
+}
+}
+-------------------------------------------------
+feedback.java :
+-------------------------------------------------
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class feedback
+ */
+public class feedback extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		PrintWriter pw = response.getWriter();
+		String email = request.getParameter("email");
+		String gender = request.getParameter("gender");
+		// String[] performance = request.getParameterValues("performance");
+		String performance = request.getParameter("performance");
+		String Q1 = request.getParameter("Q1");
+//		pw.print(performance);
+		response.setContentType("text/html");
+		feedbackbean fb = new feedbackbean();
+		fb.setEmail(email);
+		fb.setGender(gender);
+		fb.setPerformance(performance);
+		fb.setQ1(Q1);
+		DAO d = new DAO();
+		try {
+			int i = d.StudentFeedback(fb);
+			if(i>0) {
+				PrintWriter pw = response.getWriter();
+				pw.print(email+" "+gender+" "+performance+" "+Q1);
+			}
+			else {
+				PrintWriter printWriter = response.getWriter();
+		    	printWriter.print("Enter the feedback correctly");
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+---------------------------------------------------
+DBUtil.java :
+---------------------------------------------------
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBUtil {
+	final static String forNameURL = "com.mysql.cj.jdbc.Driver";
+	final static String dBURL = "jdbc:mysql://localhost:3306/EP";
+	final static String username = "root";
+	final static String password = "root";
+	public static Connection DBConnection() throws ClassNotFoundException, SQLException{
+		Class.forName(forNameURL);
+		Connection con = DriverManager.getConnection(dBURL,username,password);
+		return con;
+}
+}
+-----------------------------------------------------
+DAO.java :
+-----------------------------------------------------
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DAO {
+	public static int StudentFeedback(feedbackbean fb) throws SQLException, ClassNotFoundException{
+		Connection conn = DBUtil.DBConnection();
+		PreparedStatement ps = conn.prepareStatement("insert into feedback values(?,?,?,?)");
+		ps.setString(1,fb.getEmail());
+		ps.setString(2,fb.getGender());
+		ps.setString(3,fb.getPerformance());
+		ps.setString(4,fb.getQ1());
+	    int i = ps.executeUpdate();
+	    return i;
+	}
+}
