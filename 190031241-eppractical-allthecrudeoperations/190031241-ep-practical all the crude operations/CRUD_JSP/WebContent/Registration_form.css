@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+.labels{
+	color: black;
+}
+.abc{
+	text-align: center;
+}
+.bgm{
+	background-image: url(download.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: auto;
+}
+td,tr{
+	font-size: Large;
+}
+.tab{
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+h1{
+	text-align: center;
+}
+.tab{
+	align-content: center;
+	left: 500px;
+}

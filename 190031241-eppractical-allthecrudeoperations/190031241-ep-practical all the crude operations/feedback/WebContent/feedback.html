@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="Forms.css">
+<title>Feedback</title>
+<h1>Feedback Form</h1>
+<body class="bgm">
+	<form action="feedback" method="post" name="f1" onSubmit="return valid()">
+
+		<table class="center">
+			<tr>
+				<td><h2>1. How are your Classes going, Are they Regular ?</h2></td>
+				<td><select name="listQ1" class="dropdown">
+						<option value="">Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><h2>2. Was faculty good at explaining things ?</h2></td>
+				<td><select name="listQ2" class="dropdown">
+						<option value="">Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><h2>3. Was faculty effective in leading the Class ?</h2></td>
+				<td><select name="listQ3" class="dropdown">
+						<option value="">Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><h2>4. Stimulated Interest in the class by faculty ?</h2></td>
+				<td><select name="listQ4" class="dropdown">
+						<option value="">Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><h2>5. Are the syllabus completed by faculty in time ?</h2></td>
+				<td><select name="listQ5" class="dropdown">
+						<option value="">Select</option>
+						<option value="Excellent">Excellent</option>
+						<option value="Good">Good</option>
+						<option value="Bad">Bad</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" class="tab"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type="text/javascript">
+function valid()
+{
+	var listQ1 = document.f1.listQ1.value;
+	var listQ2 = document.f1.listQ2.value;
+	var listQ3 = document.f1.listQ3.value;
+	var listQ4 = document.f1.listQ4.value;
+	var listQ5 = document.f1.listQ5.value;
+	
+	if(listQ1 == "" || listQ1 ==null)
+	{
+		alert("Feedback for Question 1 has not been given. ")
+		return false;
+	}
+	else if(listQ2 == "" || listQ2 ==null)
+	{
+		alert("Feedback for Question 2 has not been given. ")
+		return false;
+	}
+	else if(listQ3 == "" || listQ3 ==null)
+	{
+		alert("Feedback for Question 3 has not been given. ")
+		return false;
+	}
+	else if(listQ4 == "" || listQ4 ==null)
+	{
+		alert("Feedback for Question 4 has not been given. ")
+		return false;
+	}
+	else if(listQ5 == "" || listQ5 ==null)
+	{
+		alert("Feedback for Question 5 has not been given. ")
+		return false;
+	}
+}
+</script>
+</html>

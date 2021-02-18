@@ -1,0 +1,82 @@
+<html>
+<script>
+	function validation() {
+		
+		var name = document.form.stu_name.value;
+		var email = document.form.stu_email.value;
+		var dept = document.form.stu_dep.value;
+		
+		if (name == null || name == "") 
+		{
+			alert("Please enter an Name");
+			return false;
+		}
+		else if (regno == null || regno == "") 
+		{
+			alert("Please enter an Registration Num");
+			return false;
+		}
+		else if (email == null || email == "") 
+		{
+			alert("Please enter an Email");
+			return false;
+		}
+		else if (dept == null || dept == "") 
+		{
+			alert("Please enter an Department");
+			return false;
+		}
+		else if (name.length < 8) 
+		{
+			alert("Name should have minimum of 8 characters");
+			return false;
+		}
+		else if(email.length < 10)
+		{
+			alert("Email should have minimum of 10 characters");
+			return false;
+		}
+		else if(!email.includes("@") || !email.includes("."))
+		{
+			alert("Invalid Email id must contain @ and .");
+			return false;
+		}
+		else if(!dept.includes("CSE"))
+		{
+			alert("Please enter valid Department");
+			return false;
+		}
+	}
+</script>
+<link rel="stylesheet" href="Registration_form.css" type="text/css">
+<head>
+	<h1>Update Student Details</h1>
+</head>
+<body class="bgm">
+	<form method="post" onSubmit="return validation()" name="form" action="Servlet_2">
+		<table class="center">
+			<tr>
+				<td><label class="labels">Student Name: </label></td>
+				<td><input type="text" name="stu_name"></td>
+			</tr>
+			<tr>
+				<td><label class="labels">Registration No: </label></td>
+				<td><input type="text" name="stu_regno"></td>
+			</tr>
+			<tr>
+				<td><label class="labels">Email id: </label></td>
+				<td><input type="text" name="stu_email"></td>
+			</tr>
+
+			<tr>
+				<td><label class="labels">Department: </label></td>
+				<td><input type="text" name="stu_dep"></td>
+			</tr>
+			
+			<tr>
+				<td><input type="submit" value="Update" class="tab"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
